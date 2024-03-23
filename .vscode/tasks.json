@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build my project",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g", // 添加调试信息
+                "${workspaceFolder}/src/cpp/*.cpp", // 编译工作空间中的所有cpp文件
+                "-I${workspaceFolder}/src/cpp/include", // 这是你的包含目录
+                "-o", // 指定输出文件
+                "${workspaceFolder}/build/myApplication" // 输出的二进制文件位置和名称
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Generated task by VSCode"
+        }
+    ]
+}
